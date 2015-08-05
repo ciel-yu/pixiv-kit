@@ -16,13 +16,13 @@ CREATE TABLE `image_content` (
 	`image_id`	INTEGER NOT NULL,
 	`page_no`	INTEGER NOT NULL DEFAULT 0,
 	`url`	TEXT NOT NULL DEFAULT '',
-	`check_time`	INTEGER,
+	`check_time`	TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	`path`	TEXT,
 	`size`	INTEGER NOT NULL DEFAULT -1,
 	`checksum`	TEXT,
 	PRIMARY KEY(image_id,page_no)
 );
-CREATE TABLE "image" (
+CREATE TABLE `image` (
 	`image_id`	INTEGER NOT NULL,
 	`user_id`	INTEGER NOT NULL DEFAULT -1,
 	`title`	TEXT NOT NULL DEFAULT '',
