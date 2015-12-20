@@ -11,6 +11,8 @@ USER_AGENT = 'PixivIOSApp/5.6.0'
 
 LOGIN_URL = 'https://oauth.secure.pixiv.net/auth/token'
 
+from .entity import *
+
 
 class PixivError(Exception):
     """Pixiv API exception"""
